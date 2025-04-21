@@ -112,10 +112,10 @@ if __name__ == "__main__":
         "https://www.glassdoor.com/Reviews/Google-Reviews-E9079.htm",
         
         # _____________________ADD as many urls as you want here________________
-        # "https://www.indeed.com/cmp/Google/reviews",
-        # "https://www.trustpilot.com/review/www.google.com",
-        # "https://www.g2.com/products/google-meet/reviews",
-        # "https://capterra.com/p/135005/Slack/",
+        "https://www.indeed.com/cmp/Google/reviews",
+        "https://www.trustpilot.com/review/www.google.com",
+        "https://www.g2.com/products/google-meet/reviews",
+        "https://capterra.com/p/135003/Slack/",
     ]
 
     for url in urls:

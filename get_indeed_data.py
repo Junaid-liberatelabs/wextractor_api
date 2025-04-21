@@ -1,4 +1,5 @@
 import requests
+import json
 
 def get_company_reviews_indeed(company_id,wex_token, language="en",page_no=0):
     """
@@ -16,6 +17,8 @@ def get_company_reviews_indeed(company_id,wex_token, language="en",page_no=0):
 
     if response.status_code == 200:
         data = response.json()
+        # with open('indeed_response.json', 'w') as f:
+        #     json.dump(data, f, indent=4)
         reviews = data.get("reviews", [])
         return reviews
     else:

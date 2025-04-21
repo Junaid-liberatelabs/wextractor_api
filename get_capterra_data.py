@@ -1,4 +1,5 @@
 import requests
+import json
 def get_capterra_data(id,wex_token,page_no=0):
     """
     Fetches reviews from Glassdoor via the Wextractor API.
@@ -15,6 +16,8 @@ def get_capterra_data(id,wex_token,page_no=0):
 
     if response.status_code == 200:
         data = response.json()
+        # with open('capterra_response.json', 'w') as f:
+        #      json.dump(data, f, indent=4)
         reviews = data.get("reviews", [])
         return reviews
     else:
