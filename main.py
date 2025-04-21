@@ -13,7 +13,7 @@ from get_trustpilot_data import get_trustpilot_data
 from get_g2_data import get_g2_data
 from get_capterra_data import get_capterra_data
 
-# load your WEX token from .env
+
 load_dotenv()
 WEX_TOKEN = os.getenv("WEXTRACTOR_API_KEY")
 PAGE_NO = 0
@@ -96,7 +96,7 @@ def fetch_reviews(
         return get_g2_data(id=identifier, wex_token=wex_token, page_no=page_no)
     elif platform == "capterra":
         return get_capterra_data(
-            id=int(identifier), wex_token=wex_token, language=language, page_no=page_no
+            id=int(identifier), wex_token=wex_token, page_no=page_no
         )
     else:
         # just in case you add more platforms later

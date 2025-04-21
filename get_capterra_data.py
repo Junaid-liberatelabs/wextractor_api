@@ -1,12 +1,12 @@
 import requests
-def get_capterra_data(id,wex_token, language="en",page_no=0):
+def get_capterra_data(id,wex_token,page_no=0):
     """
     Fetches reviews from Glassdoor via the Wextractor API.
     """
     url = "https://wextractor.com/api/v1/reviews/capterra"
     params = {
         "id": id,
-        "language": language,
+
         "auth_token": wex_token,
         "offset": page_no,
     }
